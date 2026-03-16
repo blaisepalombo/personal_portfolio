@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blaise Palombo | Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio website for Blaise Palombo, a Web Design & Development student building responsive web applications and user-focused digital experiences."
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">BP</a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">Web Design & Development Student</p>
+        <h1>Blaise Palombo</h1>
+        <p class="hero-text">
+          I build clean, responsive websites and web applications with a focus on
+          usability, strong structure, and thoughtful design.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="projects.html" class="btn btn-primary">View Projects</a>
+          <a href="assets/resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-projects section-padding">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Featured Work</p>
+          <h2>Selected Projects</h2>
+          <p>
+            A few projects that show my experience in full-stack development,
+            frontend work, team collaboration, and UX research.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-card-content">
+              <p class="project-tag">Full Stack</p>
+              <h3>Vintage Car Restoration Hub</h3>
+              <p>
+                A full-stack application for browsing vintage cars and managing
+                restoration projects with role-based access.
+              </p>
+              <p class="tech-stack">Node.js · Express · PostgreSQL · EJS</p>
+              <div class="card-links">
+                <a href="https://cse340-final-project-2wjq.onrender.com/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="https://github.com/blaisepalombo/CSE340_FINAL_PROJECT" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-content">
+              <p class="project-tag">Frontend</p>
+              <h3>Climbing Training Log</h3>
+              <p>
+                A web app for tracking climbing workouts, exercises, sets, reps,
+                and notes over time.
+              </p>
+              <p class="tech-stack">HTML · CSS · JavaScript</p>
+              <div class="card-links">
+                <a href="https://climbing-training-log.onrender.com/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="https://github.com/blaisepalombo/climbing-training-log" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-content">
+              <p class="project-tag">Team Project</p>
+              <h3>Date Idea App</h3>
+              <p>
+                A collaborative project where I helped with initial setup, bug
+                fixing, frontend improvements, and content ideas.
+              </p>
+              <p class="tech-stack">HTML · CSS · JavaScript · Firebase</p>
+              <div class="card-links">
+                <a href="https://wdd-x99-86659873-cf284.web.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="https://github.com/ryguy8803/WDD-X99?tab=readme-ov-file" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-preview section-padding">
+      <div class="container about-preview-box">
+        <div>
+          <p class="section-label">About Me</p>
+          <h2>Focused on practical, clean web development</h2>
+          <p>
+            I am a BYU–Idaho student studying Web Design & Development. I enjoy
+            building responsive interfaces, improving user experience, and creating
+            projects that are both useful and visually clear.
+          </p>
+        </div>
+
+        <div class="skills-box">
+          <h3>Core Skills</h3>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Node.js, Express, PostgreSQL</li>
+            <li>Responsive Web Design</li>
+            <li>Git & GitHub</li>
+            <li>Figma and Adobe Creative Cloud</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-cta section-padding">
+      <div class="container cta-box">
+        <p class="section-label">Contact</p>
+        <h2>Want to connect?</h2>
+        <p>
+          I am currently building new projects and growing my portfolio. Feel free
+          to reach out or view more of my work.
+        </p>
+        <div class="hero-buttons">
+          <a href="contact.html" class="btn btn-primary">Contact Me</a>
+          <a href="projects.html" class="btn btn-secondary">See All Projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Blaise Palombo</p>
+      <div class="footer-links">
+        <a href="https://github.com/blaisepalombo" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/blaise-palombo-29345a337" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
