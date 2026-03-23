@@ -1,0 +1,116 @@
+/* =========================
+   HERO
+========================= */
+.hero {
+  padding: 5rem 0 4rem;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "eyebrow image"
+    "title image"
+    "text text"
+    "buttons buttons";
+  gap: 0.9rem 1.25rem;
+  align-items: start;
+}
+
+.hero-eyebrow { grid-area: eyebrow; }
+.hero-title-wrap { grid-area: title; }
+
+.hero h1 {
+  max-width: 14ch;
+  color: var(--green-dark);
+  font-size: clamp(2.3rem, 6vw, 4.5rem);
+}
+
+.hero-image {
+  grid-area: image;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 50%;
+  border: 3px solid var(--green-dark);
+}
+
+.hero-text {
+  grid-area: text;
+  color: var(--text-soft);
+}
+
+.hero-buttons {
+  grid-area: buttons;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  width: 100%;
+}
+
+.hero-buttons .btn {
+  width: 100%;
+}
+
+/* =========================
+   PROJECT GRID
+========================= */
+.project-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+/* =========================
+   PROJECTS PAGE
+========================= */
+.projects-stack {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.project-showcase {
+  display: grid;
+  gap: 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+}
+
+.project-details {
+  padding: 1.5rem;
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+@media (min-width: 700px) {
+  .hero-content {
+    grid-template-areas:
+      "eyebrow image"
+      "title image"
+      "text image"
+      "buttons image";
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .hero-buttons .btn {
+    width: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero-image img {
+    width: 280px;
+    height: 280px;
+  }
+}

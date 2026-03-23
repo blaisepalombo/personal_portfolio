@@ -1,0 +1,62 @@
+/* =========================
+   VARIABLES + RESET
+========================= */
+:root {
+  --bg-main: #f6f8f4;
+  --bg-card: #ffffff;
+  --bg-accent: #e8efe6;
+  --text-main: #1f2a22;
+  --text-soft: #526055;
+  --green-dark: #264d36;
+  --green-mid: #3f6b4f;
+  --green-light: #dce8dc;
+  --border-soft: #d4ddd2;
+  --shadow-soft: 0 10px 30px rgba(22, 35, 26, 0.08);
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --max-width: 1100px;
+  --transition: 0.25s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* =========================
+   GLOBAL LAYOUT
+========================= */
+.container {
+  width: min(92%, var(--max-width));
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding: 4.5rem 0;
+}
