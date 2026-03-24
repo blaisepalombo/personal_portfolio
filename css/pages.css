@@ -180,6 +180,16 @@
   box-shadow: var(--shadow-soft);
 }
 
+/* =========================
+   ANCHOR OFFSET FOR STICKY HEADER
+========================= */
+#car-project,
+#climbing-project,
+#date-project,
+#ux-project {
+  scroll-margin-top: 110px;
+}
+
 @media (min-width: 700px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);

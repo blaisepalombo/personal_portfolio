@@ -43,19 +43,9 @@
   border: none;
   background: transparent;
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.menu-toggle span {
-  width: 24px;
-  height: 2px;
-  display: block;
-  background: var(--green-dark);
-  transition: transform var(--transition), opacity var(--transition);
-}
-
-/* =========================
-   HAMBURGER → X ANIMATION
-========================= */
 .menu-toggle span {
   width: 24px;
   height: 2px;
@@ -64,23 +54,23 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* top line */
+/* =========================
+   HAMBURGER → X ANIMATION
+========================= */
 .menu-toggle.open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
 
-/* middle line */
 .menu-toggle.open span:nth-child(2) {
   opacity: 0;
 }
 
-/* bottom line */
 .menu-toggle.open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
 
 /* =========================
-   MOBILE NAV (FIXED)
+   MOBILE NAV
 ========================= */
 .site-nav {
   position: absolute;
@@ -113,23 +103,47 @@
 
 .nav-list li {
   width: 100%;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.site-nav.open .nav-list li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.site-nav:not(.open) .nav-list li {
+  transition-delay: 0s;
+}
+
+.site-nav.open .nav-list li:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.site-nav.open .nav-list li:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.site-nav.open .nav-list li:nth-child(3) {
+  transition-delay: 0.15s;
+}
+
+.site-nav.open .nav-list li:nth-child(4) {
+  transition-delay: 0.2s;
+}
+
+.nav-list li:not(:last-child) {
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .nav-list a {
   display: block;
   width: 100%;
-  padding: 0.9rem 0.9rem;
+  padding: 0.9rem;
   font-weight: 500;
   border-radius: 10px;
-  transition:
-    background-color 0.2s ease,
-    transform 0.2s ease,
-    color 0.2s ease;
-}
-
-.nav-list a.active {
-  color: var(--green-dark);
-  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
 }
 
 .nav-list a:hover {
@@ -137,9 +151,9 @@
   transform: translateX(3px);
 }
 
-/* divider between items */
-.nav-list li:not(:last-child) {
-  border-bottom: 1px solid var(--border-soft);
+.nav-list a.active {
+  color: var(--green-dark);
+  font-weight: 700;
 }
 
 /* =========================
@@ -229,6 +243,10 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
+.project-card {
+  cursor: pointer;
+}
+
 .project-card:hover,
 .project-showcase:hover,
 .about-preview-box:hover,
@@ -270,26 +288,19 @@
   font-weight: 600;
 }
 
-/* underline animation */
 .card-links a {
   position: relative;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.card-links a:hover {
+  color: #1f3f2c;
 }
 
 .card-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.15rem;
-  width: 100%;
-  height: 1px;
-  background: currentColor;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: var(--transition);
-}
-
-.card-links a:hover::after {
-  transform: scaleX(1);
+  display: none;
 }
 
 .about-preview-box,
@@ -357,18 +368,28 @@
     padding: 0;
   }
 
-  .nav-list li {
+  .nav-list li,
+  .nav-list li:not(:last-child) {
+    width: auto;
+    opacity: 1;
+    transform: none;
     border: none;
   }
 
   .nav-list a {
     width: auto;
     padding: 0;
+    border-radius: 0;
+  }
+
+  .nav-list a.active {
+    color: var(--green-dark);
+    font-weight: 700;
   }
 
   .nav-list a:hover {
-    transform: translateY(-1px);
     background: transparent;
+    transform: translateY(-1px);
   }
 
   .footer-content {
