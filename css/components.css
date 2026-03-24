@@ -27,6 +27,13 @@
   color: var(--green-dark);
   font-size: 1.25rem;
   font-weight: 700;
+  transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition);
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(22, 35, 26, 0.08);
+  background: var(--green-light);
 }
 
 .menu-toggle {
@@ -43,10 +50,39 @@
   height: 2px;
   display: block;
   background: var(--green-dark);
+  transition: transform var(--transition), opacity var(--transition);
 }
 
+/* =========================
+   HAMBURGER → X ANIMATION
+========================= */
+.menu-toggle span {
+  width: 24px;
+  height: 2px;
+  display: block;
+  background: var(--green-dark);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* top line */
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+/* middle line */
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+/* bottom line */
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================
+   MOBILE NAV (FIXED)
+========================= */
 .site-nav {
-  display: none;
   position: absolute;
   top: 72px;
   left: 0;
@@ -54,26 +90,56 @@
   background: var(--bg-card);
   border-bottom: 1px solid var(--border-soft);
   box-shadow: var(--shadow-soft);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  pointer-events: none;
 }
 
 .site-nav.open {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .nav-list {
   display: flex;
   flex-direction: column;
-  padding: 1rem 1.25rem;
+  padding: 1.25rem;
+  gap: 0.5rem;
+}
+
+.nav-list li {
+  width: 100%;
 }
 
 .nav-list a {
-  padding: 0.9rem 0;
+  display: block;
+  width: 100%;
+  padding: 0.9rem 0.9rem;
   font-weight: 500;
+  border-radius: 10px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
-.nav-list a.active,
-.nav-list a:hover {
+.nav-list a.active {
   color: var(--green-dark);
+  font-weight: 600;
+}
+
+.nav-list a:hover {
+  background: rgba(0, 0, 0, 0.03);
+  transform: translateX(3px);
+}
+
+/* divider between items */
+.nav-list li:not(:last-child) {
+  border-bottom: 1px solid var(--border-soft);
 }
 
 /* =========================
@@ -96,7 +162,17 @@
   padding: 0.95rem 1.25rem;
   border-radius: 999px;
   font-weight: 600;
-  transition: 0.25s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(22, 35, 26, 0.08);
 }
 
 .btn-primary {
@@ -110,14 +186,143 @@
 }
 
 /* =========================
-   CARDS + FOOTER
+   HEADINGS + TEXT
 ========================= */
-.project-card {
+.section-heading {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.section-heading h2,
+.about-preview-box h2,
+.cta-box h2,
+.page-hero h1 {
+  color: var(--green-dark);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.15;
+}
+
+.section-heading p,
+.about-preview-box p,
+.cta-box p,
+.project-card p,
+.skills-box li,
+.page-hero p:last-child,
+.project-summary,
+.project-highlights,
+.footer-content p {
+  color: var(--text-soft);
+}
+
+/* =========================
+   CARDS + CONTENT BLOCKS
+========================= */
+.project-card,
+.project-showcase,
+.about-preview-box,
+.cta-box {
   background: var(--bg-card);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card:hover,
+.project-showcase:hover,
+.about-preview-box:hover,
+.cta-box:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.project-card-content {
   padding: 1.5rem;
+}
+
+.project-card h3 {
+  margin: 0.5rem 0 0.75rem;
+  color: var(--green-dark);
+  font-size: 1.3rem;
+}
+
+.tech-stack {
+  margin-top: 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.card-links,
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card-links {
+  margin-top: 1rem;
+}
+
+.card-links a,
+.footer-links a {
+  color: var(--green-dark);
+  font-weight: 600;
+}
+
+/* underline animation */
+.card-links a {
+  position: relative;
+}
+
+.card-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.15rem;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition);
+}
+
+.card-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.about-preview-box,
+.cta-box {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.skills-box {
+  padding: 1.25rem;
+  background: var(--bg-accent);
+  border-radius: var(--radius-md);
+}
+
+.skills-box h3 {
+  margin-bottom: 0.75rem;
+  color: var(--green-dark);
+}
+
+.skills-box ul {
+  display: grid;
+  gap: 0.6rem;
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  padding: 1.5rem 0 2rem;
+  border-top: 1px solid var(--border-soft);
 }
 
 .footer-content {
@@ -126,7 +331,49 @@
   gap: 0.75rem;
 }
 
-.footer-links {
-  display: flex;
-  gap: 1rem;
+/* =========================
+   DESKTOP NAV
+========================= */
+@media (min-width: 700px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    position: static;
+    width: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    gap: 1.4rem;
+    padding: 0;
+  }
+
+  .nav-list li {
+    border: none;
+  }
+
+  .nav-list a {
+    width: auto;
+    padding: 0;
+  }
+
+  .nav-list a:hover {
+    transform: translateY(-1px);
+    background: transparent;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

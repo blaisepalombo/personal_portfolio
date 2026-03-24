@@ -1,5 +1,5 @@
 /* =========================
-   HERO
+   HOME HERO
 ========================= */
 .hero {
   padding: 5rem 0 4rem;
@@ -17,19 +17,26 @@
   align-items: start;
 }
 
-.hero-eyebrow { grid-area: eyebrow; }
-.hero-title-wrap { grid-area: title; }
+.hero-eyebrow {
+  grid-area: eyebrow;
+}
+
+.hero-title-wrap {
+  grid-area: title;
+}
 
 .hero h1 {
   max-width: 14ch;
   color: var(--green-dark);
   font-size: clamp(2.3rem, 6vw, 4.5rem);
+  line-height: 1.05;
 }
 
 .hero-image {
   grid-area: image;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .hero-image img {
@@ -37,13 +44,22 @@
   height: 130px;
   object-fit: cover;
   object-position: center 30%;
-  border-radius: 50%;
   border: 3px solid var(--green-dark);
+  border-radius: 50%;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-image img:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
 }
 
 .hero-text {
   grid-area: text;
+  max-width: none;
   color: var(--text-soft);
+  font-size: 1rem;
 }
 
 .hero-buttons {
@@ -52,6 +68,7 @@
   flex-direction: column;
   gap: 0.9rem;
   width: 100%;
+  margin-top: 0.5rem;
 }
 
 .hero-buttons .btn {
@@ -59,7 +76,7 @@
 }
 
 /* =========================
-   PROJECT GRID
+   HOMEPAGE SECTIONS
 ========================= */
 .project-grid {
   display: grid;
@@ -67,8 +84,135 @@
 }
 
 /* =========================
+   ABOUT PAGE
+========================= */
+.about-main {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about-text {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--bg-card), #f2f6f0);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-text {
+  padding: 1.75rem;
+}
+
+.about-text h2,
+.skills-section h2,
+.about-interests h2 {
+  color: var(--green-dark);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.15;
+}
+
+.about-text p,
+.about-interests p {
+  color: var(--text-soft);
+  max-width: 70ch;
+}
+
+.skills-section {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.skills-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+}
+
+.skills-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: #bfd0c0;
+}
+
+.skills-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.skills-card h3 {
+  margin-bottom: 0.65rem;
+  color: var(--green-dark);
+  font-size: 1.05rem;
+}
+
+.skills-card ul {
+  display: grid;
+  gap: 0.45rem;
+  padding-left: 1rem;
+  list-style: disc;
+  color: var(--text-soft);
+}
+
+.about-interests {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #eef4eb, var(--bg-card));
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (min-width: 700px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-text,
+  .about-interests {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* =========================
    PROJECTS PAGE
 ========================= */
+.page-hero {
+  padding: 4.5rem 0 2rem;
+}
+
+.page-hero-content {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.page-hero p:last-child {
+  max-width: 42rem;
+}
+
 .projects-stack {
   display: grid;
   gap: 1.5rem;
@@ -77,40 +221,132 @@
 .project-showcase {
   display: grid;
   gap: 1.25rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-details {
+  display: grid;
+  gap: 0.9rem;
   padding: 1.5rem;
 }
 
+.project-details h2 {
+  color: var(--green-dark);
+  font-size: 1.6rem;
+  line-height: 1.15;
+}
+
+.project-highlights {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+
 /* =========================
-   MEDIA QUERIES
+   TABLET
+========================= */
+@media (min-width: 600px) {
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+/* =========================
+   DESKTOP LAYOUT
 ========================= */
 @media (min-width: 700px) {
+  .hero {
+    padding: 7rem 0 5rem;
+  }
+
   .hero-content {
     grid-template-areas:
       "eyebrow image"
       "title image"
       "text image"
       "buttons image";
+    gap: 1rem 1.5rem;
+  }
+
+  .hero-text {
+    max-width: 38rem;
   }
 
   .hero-buttons {
     flex-direction: row;
+    flex-wrap: wrap;
     width: auto;
   }
 
   .hero-buttons .btn {
     width: auto;
   }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-preview-box {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+  }
 }
 
+/* =========================
+   WIDER PROJECT LAYOUT
+========================= */
+@media (min-width: 800px) {
+  .project-showcase {
+    grid-template-columns: 1fr 1.1fr;
+    align-items: stretch;
+  }
+
+  .project-image {
+    height: 100%;
+  }
+
+  .project-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* =========================
+   LARGE DESKTOP
+========================= */
 @media (min-width: 1000px) {
   .hero-image img {
     width: 280px;
     height: 280px;
+  }
+
+  .hero-text {
+    font-size: 1.08rem;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-card-content,
+  .about-preview-box,
+  .cta-box,
+  .project-details {
+    padding: 2rem;
   }
 }
