@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Blaise Palombo</title>
+  <meta
+    name="description"
+    content="Contact Blaise Palombo for internship opportunities, project collaboration, or professional connections."
+  />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">BP</a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-content">
+        <p class="section-label">Contact</p>
+        <h1>Let’s Connect</h1>
+        <p>
+          Feel free to send me a message if you want to talk about internships,
+          projects, collaboration, or anything related to web development.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container contact-layout">
+        <article class="contact-card contact-form-card">
+          <div class="contact-card-header">
+            <p class="section-label">Send a Message</p>
+            <h2>Get in Touch</h2>
+            <p>
+              Fill out the form below and I will get back to you by email.
+            </p>
+          </div>
+
+          <form
+            class="contact-form"
+            id="contactForm"
+            action="https://formspree.io/f/mojkgnbr"
+            method="POST"
+          >
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="7" required></textarea>
+            </div>
+
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+
+            <button type="submit" class="btn btn-primary contact-submit-btn">
+              Send Message
+            </button>
+          </form>
+        </article>
+
+        <article class="contact-card contact-info-card">
+          <div class="contact-card-header">
+            <p class="section-label">Opportunities</p>
+            <h2>What I’m Looking For</h2>
+            <p>
+              I am currently looking for opportunities where I can keep building
+              real experience and continue growing as a developer.
+            </p>
+          </div>
+
+          <div class="contact-info-content">
+            <div class="info-block">
+              <h3>Interested In</h3>
+              <ul class="contact-bullet-list">
+                <li>Internships in web development</li>
+                <li>Frontend and full stack projects</li>
+                <li>Team environments where I can keep learning</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h3>Experience With</h3>
+              <ul class="contact-bullet-list">
+                <li>HTML, CSS, JavaScript</li>
+                <li>Node.js, Express, PostgreSQL</li>
+                <li>Responsive design and UI improvement</li>
+              </ul>
+            </div>
+
+            <div class="info-block">
+              <h3>Elsewhere</h3>
+              <div class="contact-links-list">
+                <a
+                  href="https://github.com/blaisepalombo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-link-card"
+                >
+                  <span class="contact-label">GitHub</span>
+                  <span class="contact-value">View my code and projects</span>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/blaise-palombo-29345a337"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-link-card"
+                >
+                  <span class="contact-label">LinkedIn</span>
+                  <span class="contact-value">Connect with me professionally</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a href="projects.html" class="btn btn-primary">View Projects</a>
+            <a href="assets/resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="success-popup" id="successPopup" aria-hidden="true">
+    <div class="success-popup-card">
+      <h3>Message sent</h3>
+      <p>Thanks for reaching out. Your message was sent successfully.</p>
+      <button type="button" class="btn btn-primary" id="closeSuccessPopup">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Blaise Palombo</p>
+      <div class="footer-links">
+        <a href="https://github.com/blaisepalombo" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/blaise-palombo-29345a337" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
