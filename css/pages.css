@@ -466,6 +466,16 @@
     padding: 7rem 0 5rem;
   }
 
+  .cta-buttons {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
+  }
+
+  .cta-buttons .btn {
+  width: auto;
+  }
+
   .hero-content {
     grid-template-areas:
       "eyebrow image"
@@ -559,4 +569,22 @@
   .project-details {
     padding: 2rem;
   }
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.cta-buttons .btn {
+  width: 100%;
+}
+
+.contact-cta .section-label,
+.contact-cta h2,
+.contact-cta p {
+  text-align: left;
 }
