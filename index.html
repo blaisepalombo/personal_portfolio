@@ -6,7 +6,7 @@
   <title>Blaise Palombo | Portfolio</title>
   <meta
     name="description"
-    content="Portfolio website for Blaise Palombo, a Web Design & Development student building responsive web applications and user-focused digital experiences."
+    content="Portfolio website for Blaise Palombo, a Web Design &amp; Development student building responsive web applications and user-focused digital experiences."
   />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -35,7 +35,7 @@
   <main>
     <section class="hero">
       <div class="container hero-content">
-        <p class="eyebrow hero-eyebrow">Web Design & Development Student</p>
+        <p class="eyebrow hero-eyebrow">Software Developer · Web, Mobile &amp; Cloud</p>
 
         <div class="hero-title-wrap">
           <h1>Blaise Palombo</h1>
@@ -46,8 +46,8 @@
         </div>
 
         <p class="hero-text">
-          I build clean, responsive websites and web applications with a focus on
-          usability, strong structure, and thoughtful design.
+          I build practical digital products—from mobile marketplaces to automated
+          cloud systems—with a focus on useful experiences and dependable engineering.
         </p>
 
         <div class="hero-buttons">
@@ -63,57 +63,58 @@
           <p class="section-label">Featured Work</p>
           <h2>Selected Projects</h2>
           <p>
-            A few projects that show my experience in backend development,
-            frontend design, collaboration, and user-centered thinking.
+            Recent work that shows how I combine product thinking, interface design,
+            backend systems, and cloud automation.
           </p>
         </div>
 
         <div class="project-grid">
+          <article class="project-card" onclick="window.location.href='projects.html#buymour-project'">
+            <div class="project-card-content">
+              <p class="project-tag">Mobile App · Location + Marketplace</p>
+              <h3>BuyMour</h3>
+              <p>
+                A Flutter app for discovering nearby garage sales and publishing
+                location-aware listings with schedules, categories, and photos.
+              </p>
+              <p class="tech-stack">Flutter · Firebase · Firestore · Google Maps</p>
+              <div class="card-links">
+                <a href="https://youtube.com/shorts/5besoRMktX0?feature=share" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Watch Demo</a>
+                <a href="https://github.com/blaisepalombo/buymour" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" onclick="window.location.href='projects.html#bagspec-project'">
+            <div class="project-card-content">
+              <p class="project-tag">Cloud Automation · AI + APIs</p>
+              <h3>BagSpec Worker</h3>
+              <p>
+                An automated system that scans eBay, estimates electronics repair risk,
+                checks comparable prices, and scores resale opportunities.
+              </p>
+              <p class="tech-stack">Cloudflare Workers · Workers AI · D1 · eBay API</p>
+              <div class="card-links">
+                <a href="https://bagspec.com" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Live Site</a>
+                <a href="https://github.com/blaisepalombo/bagspec-worker" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">GitHub</a>
+              </div>
+            </div>
+          </article>
+
           <article class="project-card" onclick="window.location.href='projects.html#car-project'">
             <div class="project-card-content">
               <p class="project-tag">Full Stack · Backend Focus</p>
               <h3>Vintage Car Restoration Hub</h3>
               <p>
-                A full-stack application built around managing users, cars, and
-                restoration workflows with a structured backend and role-based access.
+                A full-stack application for managing users, vehicles, and restoration
+                workflows with a structured backend and role-based access.
               </p>
               <p class="tech-stack">Node.js · Express · PostgreSQL · EJS · Auth</p>
               <div class="card-links">
                 <a href="https://cse340-final-project-2wjq.onrender.com/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Live Demo</a>
                 <a href="https://github.com/blaisepalombo/CSE340_FINAL_PROJECT" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">GitHub</a>
               </div>
-            </div>
-          </article>
-
-          <article class="project-card" onclick="window.location.href='projects.html#bevlog-project'">
-            <div class="project-card-content">
-              <p class="project-tag">Full Stack · API + Auth</p>
-              <h3>BevLog</h3>
-              <p>
-                A personalized energy drink tracker where users can log drinks, rate them,
-                and track caffeine habits through a clean dashboard with authentication.
-              </p>
-              <p class="tech-stack">Node.js · Express · MongoDB · OAuth · REST API</p>
-              <div class="card-links">
-                <a href="https://project-2-80o0.onrender.com/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Live Demo</a>
-                <a href="https://github.com/blaisepalombo/Project_2" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">GitHub</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card" onclick="window.location.href='projects.html#date-project'">
-            <div class="project-card-content">
-              <p class="project-tag">Team Project · Collaboration</p>
-              <h3>Date Idea App</h3>
-              <p>
-                A collaborative web app where I helped improve the frontend, fix bugs,
-                and support the overall experience through teamwork and iteration.
-              </p>
-              <p class="tech-stack">HTML · CSS · JavaScript · Firebase · GitHub</p>
-              <div class="card-links">
-                <a href="https://wdd-x99-86659873-cf284.web.app/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">Live Demo</a>
-                <a href="https://github.com/ryguy8803/WDD-X99?tab=readme-ov-file" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">GitHub</a>
-              </div>
+              <p class="demo-note">Free Render demo—first load may take about a minute.</p>
             </div>
           </article>
         </div>
@@ -124,22 +125,22 @@
       <div class="container about-preview-box">
         <div>
           <p class="section-label">About Me</p>
-          <h2>Focused on practical, clean web development</h2>
+          <h2>Focused on practical, useful software</h2>
           <p>
-            I am a BYU–Idaho student studying Web Design & Development. I enjoy
-            building responsive interfaces, improving user experience, and creating
-            projects that are both useful and visually clear.
+            I am a BYU–Idaho student studying Web Design &amp; Development. I enjoy
+            building responsive interfaces, reliable backends, and automated systems
+            that solve concrete problems.
           </p>
         </div>
 
         <div class="skills-box">
           <h3>Core Skills</h3>
           <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Node.js, Express, PostgreSQL</li>
-            <li>Responsive Web Design</li>
-            <li>Git & GitHub</li>
-            <li>Figma and Adobe Creative Cloud</li>
+            <li>JavaScript, Dart, Flutter</li>
+            <li>Node.js, SQL, REST APIs</li>
+            <li>Firebase &amp; Cloudflare Workers</li>
+            <li>Git &amp; GitHub</li>
+            <li>Responsive UI &amp; UX Design</li>
           </ul>
         </div>
       </div>

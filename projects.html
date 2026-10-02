@@ -6,7 +6,7 @@
   <title>Projects | Blaise Palombo</title>
   <meta
     name="description"
-    content="Projects by Blaise Palombo including full-stack, frontend, team, and UX research work."
+    content="Projects by Blaise Palombo spanning mobile apps, cloud automation, full-stack development, frontend design, and UX research."
   />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -38,14 +38,83 @@
         <p class="section-label">Portfolio</p>
         <h1>Projects</h1>
         <p>
-          These projects highlight my experience across backend development,
-          frontend design, team collaboration, and user-focused problem solving.
+          Selected work across mobile development, cloud automation, full-stack
+          applications, and user-focused design.
         </p>
       </div>
     </section>
 
     <section class="section-padding">
       <div class="container projects-stack">
+
+        <!-- BUYMOUR -->
+        <article class="project-showcase" id="buymour-project">
+          <div class="project-image project-visual buymour-visual" role="img" aria-label="BuyMour mobile app interface showing nearby garage sales">
+            <div class="phone-mockup">
+              <div class="phone-status"><span>9:41</span><span>● ● ●</span></div>
+              <div class="phone-heading">
+                <span>Nearby sales</span>
+                <span class="filter-chip">Filter</span>
+              </div>
+              <div class="sale-preview">
+                <span class="sale-thumb sale-thumb-coral">SALE</span>
+                <span><strong>Moving Sale</strong><small>0.8 mi · Today</small><em>Furniture · Tools</em></span>
+              </div>
+              <div class="sale-preview">
+                <span class="sale-thumb sale-thumb-green">SALE</span>
+                <span><strong>Huge Garage Sale</strong><small>1.6 mi · Today</small><em>Tools · Household</em></span>
+              </div>
+              <div class="phone-nav"><span>▤<small>Sales</small></span><span>⌖<small>Map</small></span><span>＋<small>Post</small></span></div>
+            </div>
+          </div>
+
+          <div class="project-details">
+            <p class="project-tag">Mobile App · Location + Marketplace</p>
+            <h2>BuyMour</h2>
+            <p class="project-summary">
+              A Flutter marketplace that helps people discover nearby garage sales and
+              lets sellers publish detailed, location-aware listings from their phones.
+            </p>
+            <p class="tech-stack">Flutter · Dart · Firebase Auth · Firestore · Cloud Storage · Google Maps</p>
+            <ul class="project-highlights">
+              <li>Built list and map-based discovery for nearby, time-sensitive sales</li>
+              <li>Created a guided five-step listing flow with validation and review</li>
+              <li>Added multi-image uploads with cleanup for failed transactions</li>
+              <li>Secured user-generated listings with Firebase authentication and rules</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://youtube.com/shorts/5besoRMktX0?feature=share" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Watch Demo</a>
+              <a href="https://github.com/blaisepalombo/buymour" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- BAGSPEC -->
+        <article class="project-showcase" id="bagspec-project">
+          <div class="project-image project-screenshot">
+            <img src="images/bagspec-dashboard.png" alt="BagSpec live dashboard showing scanner status and repair-resale opportunities" loading="lazy" />
+          </div>
+
+          <div class="project-details">
+            <p class="project-tag">Cloud Automation · AI + APIs</p>
+            <h2>BagSpec Worker</h2>
+            <p class="project-summary">
+              A scheduled Cloudflare Worker that finds repairable electronics on eBay,
+              evaluates repair risk, compares resale prices, and scores each opportunity.
+            </p>
+            <p class="tech-stack">Cloudflare Workers · Workers AI · D1 SQL · eBay API · JavaScript</p>
+            <ul class="project-highlights">
+              <li>Built a five-minute scan, enrichment, and analysis pipeline</li>
+              <li>Used structured AI output to estimate repair difficulty, risk, and parts cost</li>
+              <li>Filtered comparable listings and calculated profit, ROI, and offer ceilings</li>
+              <li>Stored lifecycle state in D1 and protected operational endpoints</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://bagspec.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Site</a>
+              <a href="https://github.com/blaisepalombo/bagspec-worker" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+            </div>
+          </div>
+        </article>
 
         <!-- CAR PROJECT -->
         <article class="project-showcase" id="car-project">
@@ -55,7 +124,7 @@
 
           <div class="project-details">
             <p class="project-tag">Full Stack · Backend Focus</p>
-            <h2>Vintage Car Showcase & Restoration Hub</h2>
+            <h2>Vintage Car Showcase &amp; Restoration Hub</h2>
 
             <p class="project-summary">
               A full-stack application centered around building a structured backend
@@ -72,9 +141,10 @@
             </ul>
 
             <div class="project-links">
-              <a href="https://cse340-final-project-2wjq.onrender.com/" target="_blank" class="btn btn-primary">Live Demo</a>
-              <a href="https://github.com/blaisepalombo/CSE340_FINAL_PROJECT" target="_blank" class="btn btn-secondary">GitHub</a>
+              <a href="https://cse340-final-project-2wjq.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Demo</a>
+              <a href="https://github.com/blaisepalombo/CSE340_FINAL_PROJECT" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
             </div>
+            <p class="demo-note">Free Render demo—first load may take about a minute.</p>
           </div>
         </article>
 
@@ -103,9 +173,10 @@
             </ul>
 
             <div class="project-links">
-              <a href="https://project-2-80o0.onrender.com/" target="_blank" class="btn btn-primary">Live Demo</a>
-              <a href="https://github.com/blaisepalombo/Project_2" target="_blank" class="btn btn-secondary">GitHub</a>
+              <a href="https://project-2-80o0.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Demo</a>
+              <a href="https://github.com/blaisepalombo/Project_2" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
             </div>
+            <p class="demo-note">Free Render demo—first load may take about a minute.</p>
           </div>
         </article>
 
@@ -134,71 +205,10 @@
             </ul>
 
             <div class="project-links">
-              <a href="https://climbing-training-log.onrender.com/" target="_blank" class="btn btn-primary">Live Demo</a>
-              <a href="https://github.com/blaisepalombo/climbing-training-log" target="_blank" class="btn btn-secondary">GitHub</a>
+              <a href="https://climbing-training-log.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Demo</a>
+              <a href="https://github.com/blaisepalombo/climbing-training-log" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
             </div>
-          </div>
-        </article>
-
-        <!-- PORTFOLIO -->
-        <article class="project-showcase" id="portfolio-project">
-          <div class="project-image">
-            <img src="images/portfolio-preview.png" alt="Portfolio website screenshot" />
-          </div>
-
-          <div class="project-details">
-            <p class="project-tag">Personal Project · UI & Presentation</p>
-            <h2>Portfolio Website</h2>
-
-            <p class="project-summary">
-              A custom-built portfolio designed to present my work clearly and
-              professionally, with a focus on layout, consistency, and user experience.
-            </p>
-
-            <p class="tech-stack">HTML · CSS · JavaScript · Responsive Design · Netlify</p>
-
-            <ul class="project-highlights">
-              <li>Designed a clean, responsive layout for showcasing projects</li>
-              <li>Improved navigation and overall user flow across pages</li>
-              <li>Built a working contact form with custom success feedback</li>
-              <li>Deployed and managed the site using Netlify</li>
-            </ul>
-
-            <div class="project-links">
-              <a href="https://portfolioblaisepalombo.netlify.app/" target="_blank" class="btn btn-primary">Live Demo</a>
-              <a href="https://github.com/blaisepalombo/personal_portfolio" target="_blank" class="btn btn-secondary">GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- DATE APP -->
-        <article class="project-showcase" id="date-project">
-          <div class="project-image">
-            <img src="images/date-app-project.png" alt="Date Idea App screenshot" />
-          </div>
-
-          <div class="project-details">
-            <p class="project-tag">Team Project · Collaboration</p>
-            <h2>Date Idea App</h2>
-
-            <p class="project-summary">
-              A team-built application designed to generate and organize date ideas,
-              where I contributed to frontend improvements, debugging, and usability.
-            </p>
-
-            <p class="tech-stack">HTML · CSS · JavaScript · Firebase · GitHub</p>
-
-            <ul class="project-highlights">
-              <li>Collaborated using GitHub for version control and team workflow</li>
-              <li>Improved UI consistency and fixed usability issues</li>
-              <li>Worked with Firebase for basic data handling</li>
-              <li>Contributed ideas that shaped features and interactions</li>
-            </ul>
-
-            <div class="project-links">
-              <a href="https://wdd-x99-86659873-cf284.web.app/" target="_blank" class="btn btn-primary">Live Demo</a>
-              <a href="https://github.com/ryguy8803/WDD-X99" target="_blank" class="btn btn-secondary">GitHub</a>
-            </div>
+            <p class="demo-note">Free Render demo—first load may take about a minute.</p>
           </div>
         </article>
 
@@ -227,7 +237,7 @@
             </ul>
 
             <div class="project-links">
-              <a href="https://www.figma.com/make/8U13XMaxHq01uLo4IIDGnf/Portfoliate?p=f&t=d5EnJdUaPK9WTbl1-0&fullscreen=1" target="_blank" class="btn btn-primary">Prototype</a>
+              <a href="https://www.figma.com/make/8U13XMaxHq01uLo4IIDGnf/Portfoliate?p=f&amp;t=d5EnJdUaPK9WTbl1-0&amp;fullscreen=1" target="_blank" class="btn btn-primary">Prototype</a>
               <a href="https://drive.google.com/file/d/1AZlf80dYPW0GA_Mr9BlaWJ34dMQs1SRt/view" target="_blank" class="btn btn-secondary">Report</a>
               <a href="https://www.figma.com/board/uTu2VEiQJFSeO8FN8wuODs/FIGJAM-Blueprint-for-project?t=ZoYMgsJYooc1fej5-1" target="_blank" class="btn btn-secondary">Figma Timeline</a>
             </div>

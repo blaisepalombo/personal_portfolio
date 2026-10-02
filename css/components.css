@@ -282,6 +282,13 @@
   margin-top: 1rem;
 }
 
+.demo-note {
+  margin-top: 0.7rem;
+  color: #6f7d72;
+  font-size: 0.82rem;
+  font-style: italic;
+}
+
 .card-links a,
 .footer-links a {
   color: var(--green-dark);

@@ -171,7 +171,8 @@
 ========================= */
 #car-project,
 #climbing-project,
-#date-project,
+#buymour-project,
+#bagspec-project,
 #ux-project {
   scroll-margin-top: 110px;
 }
@@ -214,6 +215,333 @@
   height: 100%;
   object-fit: cover;
 }
+
+.project-screenshot {
+  min-height: 390px;
+  padding: 1rem;
+  background: #07100c;
+}
+
+.project-screenshot img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.project-visual {
+  min-height: 390px;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* Project visuals are lightweight interface studies built from the real apps. */
+.buymour-visual {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.72) 0 3%, transparent 4%),
+    linear-gradient(145deg, #ded6ff, #f6f3ff 55%, #cfc3ff);
+}
+
+.phone-mockup {
+  width: min(100%, 255px);
+  padding: 0.8rem 0.8rem 0;
+  background: #f7f6fb;
+  border: 7px solid #292530;
+  border-radius: 30px;
+  box-shadow: 0 24px 50px rgba(48, 34, 94, 0.24);
+  color: #25212c;
+  transform: rotate(-2deg);
+}
+
+.phone-status,
+.phone-heading,
+.analysis-topline,
+.deal-card,
+.metric-row,
+.pipeline {
+  display: flex;
+  align-items: center;
+}
+
+.phone-status {
+  justify-content: space-between;
+  padding: 0 0.3rem 0.7rem;
+  font-size: 0.58rem;
+  font-weight: 800;
+}
+
+.phone-heading {
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.filter-chip {
+  padding: 0.25rem 0.5rem;
+  background: #ebe6ff;
+  border-radius: 999px;
+  color: #5b3cdd;
+  font-size: 0.55rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sale-preview {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 0.65rem;
+  margin-bottom: 0.65rem;
+  padding: 0.6rem;
+  background: #fff;
+  border: 1px solid #ebe8ef;
+  border-radius: 14px;
+  box-shadow: 0 5px 14px rgba(37, 33, 44, 0.06);
+}
+
+.sale-preview > span:last-child,
+.deal-card div,
+.metric-row span,
+.phone-nav span {
+  display: grid;
+}
+
+.sale-preview strong {
+  font-size: 0.7rem;
+}
+
+.sale-preview small {
+  color: #6f6a77;
+  font-size: 0.55rem;
+}
+
+.sale-preview em {
+  margin-top: 0.25rem;
+  color: #6c4cf1;
+  font-size: 0.5rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.sale-thumb {
+  display: grid;
+  place-items: center;
+  min-height: 52px;
+  border-radius: 11px;
+  color: #fff;
+  font-size: 0.54rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.sale-thumb-coral { background: #ef6c57; }
+.sale-thumb-green { background: #3e9b74; }
+
+.phone-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 0.85rem;
+  padding: 0.55rem 0.25rem 0.65rem;
+  border-top: 1px solid #e7e3ec;
+  color: #6c4cf1;
+  text-align: center;
+}
+
+.phone-nav small {
+  color: #5f5967;
+  font-size: 0.48rem;
+}
+
+.bagspec-visual {
+  background:
+    radial-gradient(circle at 80% 12%, rgba(190, 224, 199, 0.8), transparent 34%),
+    linear-gradient(145deg, #e7efe5, #f9f7ef 56%, #dbe8d9);
+}
+
+.bagspec-browser {
+  width: min(100%, 470px);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #bdcbbf;
+  border-radius: 16px;
+  box-shadow: 0 24px 48px rgba(38, 77, 54, 0.2);
+  color: #203127;
+  transform: rotate(1deg);
+}
+
+.browser-bar {
+  display: grid;
+  grid-template-columns: 52px 1fr 52px;
+  align-items: center;
+  padding: 0.55rem 0.7rem;
+  background: #edf2ed;
+  border-bottom: 1px solid #d4ddd2;
+}
+
+.browser-dots {
+  color: #9cad9f;
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+}
+
+.browser-address {
+  padding: 0.25rem 0.55rem;
+  background: #fff;
+  border-radius: 999px;
+  color: #718076;
+  font-size: 0.53rem;
+  text-align: center;
+}
+
+.bagspec-app {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  min-height: 258px;
+}
+
+.bagspec-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.72rem;
+  padding: 1rem 0.65rem;
+  background: #173d2a;
+  color: #c9d8ce;
+  font-size: 0.52rem;
+}
+
+.bagspec-sidebar strong {
+  margin-bottom: 0.65rem;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.bagspec-sidebar span {
+  padding: 0.4rem 0.45rem;
+  border-radius: 6px;
+}
+
+.bagspec-sidebar .active {
+  background: #2e6042;
+  color: #fff;
+  font-weight: 800;
+}
+
+.bagspec-dashboard {
+  padding: 1rem;
+  background: #fbfcfa;
+}
+
+.dashboard-heading,
+.opportunity-row {
+  display: grid;
+  align-items: center;
+}
+
+.dashboard-heading {
+  grid-template-columns: 1fr auto;
+  margin-bottom: 0.75rem;
+}
+
+.dashboard-heading div {
+  display: grid;
+}
+
+.dashboard-heading small {
+  color: #7e9084;
+  font-size: 0.46rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.dashboard-heading strong { font-size: 0.9rem; }
+
+.scan-pill {
+  padding: 0.3rem 0.5rem;
+  background: #e2f4e7;
+  border-radius: 999px;
+  color: #267044;
+  font-size: 0.48rem;
+  font-weight: 800;
+}
+
+.scan-pill::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 0.25rem;
+  background: #37a65c;
+  border-radius: 50%;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+}
+
+.dashboard-stats span {
+  display: grid;
+  padding: 0.55rem;
+  background: #f0f4ef;
+  border: 1px solid #e1e8e1;
+  border-radius: 8px;
+}
+
+.dashboard-stats small { color: #7d8d82; font-size: 0.45rem; }
+.dashboard-stats strong { color: #264d36; font-size: 0.85rem; }
+
+.opportunity-row {
+  grid-template-columns: 34px minmax(0, 1fr) auto auto;
+  gap: 0.5rem;
+  margin-top: 0.45rem;
+  padding: 0.55rem;
+  border: 1px solid #e0e8e1;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.opportunity-row.featured {
+  border-color: #9acbaa;
+  box-shadow: 0 5px 12px rgba(38, 77, 54, 0.08);
+}
+
+.opportunity-row > span:nth-child(2),
+.profit {
+  display: grid;
+  min-width: 0;
+}
+
+.opportunity-row strong { overflow: hidden; font-size: 0.61rem; text-overflow: ellipsis; white-space: nowrap; }
+.opportunity-row small { color: #7d8d82; font-size: 0.45rem; }
+
+.device-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  background: #e5eee5;
+  border-radius: 7px;
+  color: #345f43;
+  font-size: 0.5rem;
+  font-weight: 900;
+}
+
+.profit { text-align: right; }
+.profit strong { color: #267044; }
+
+.buy-badge,
+.watch-badge {
+  padding: 0.27rem 0.38rem;
+  border-radius: 999px;
+  font-size: 0.43rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.buy-badge { background: #daf3e2; color: #1c6b39; }
+.watch-badge { background: #fff0cf; color: #875d08; }
 
 .project-details {
   gap: 0.9rem;
